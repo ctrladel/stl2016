@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+		<title>Group an alternative to Organic Groups</title>
 
 		<link rel="stylesheet" href="css/reveal.css">
 		<link rel="stylesheet" href="css/theme/dbridge.css">
@@ -20,12 +20,332 @@
 			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
 			document.getElementsByTagName( 'head' )[0].appendChild( link );
 		</script>
+
+		<link rel="stylesheet" href="lib/fontawesome/css/font-awesome.min.css">
+		<link rel='shortcut icon' href='media/images/favicon-group.ico' type='image/x-icon'/ >
 	</head>
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+
+				<!-- Title -->
+				<section>
+					<a href="https://www.drupal.org/project/group"><img src="media/images/GROUP-logo.gif"></a>
+					<h2>An Alternative to Organic Groups</h2>
+					<p>
+						<small>Presentation by Kyle Einecker</small>
+					</p>
+				</section>
+
+				<!-- About me -->
+				<section>
+					<h2>The part about me</h2>
+					<p class="fragment"><img src="media/images/dbridge.png"></p>
+					<span class="fragment">
+						<span>ctrlADel</span>
+						<a href="https://www.drupal.org/u/ctrladel"><i class="fa fa-drupal fa-3x" aria-hidden="true"></i></a>
+						<a href="https://github.com/ctrladel"><i class="fa fa-github fa-3x" aria-hidden="true"></i></a>
+					</span>
+					<p class="fragment"><a href="https://twitter.com/dbridgechicago"><i class="fa fa-twitter fa-3x" aria-hidden="true"></i> @DBridgeChicago</a></p>
+
+					<aside class="notes">
+						<ul>
+							<li>Do everything</li>
+							<li>Prefer backend</li>
+						</ul>
+					</aside>
+				</section>
+
+				<!-- About group -->
+				<section>
+					<h2>The part about group</h2>
+					<p class="fragment"><img src="media/images/kristiaan.jpg" style="vertical-align: middle"> <span style="vertical-align: middle">kristiaanvandeneynde</span></p>
+					<p class="fragment">Been around since 2013</p>
+					<p class="fragment">~1,500 installs</p>
+					<img class="fragment" src="media/images/drupal8.png" height="100px">
+				</section>
+
+				<!-- The problem -->
+				<section>
+					<section>
+						<h1>The problem</h1>
+					</section>
+
+					<section>
+						<h2>Unorganized content is hard to</h2>
+						<br>
+						<h3 class="secondary-heading-color">Display</h3>
+						<h3 class="secondary-heading-color">Manage</h3>
+						<h3 class="secondary-heading-color">Control access too</h3>
+					</section>
+
+					<section>
+						<img src="media/images/450_messy1_080516.jpg">
+					</section>
+
+					<section>
+						<h2>The strategies</h2>
+
+						<div class="fragment">
+							<h4 class="secondary-heading-color">Tagging</h4>
+							<p style="font-size: 0.8em">Add keywords about a book</p>
+						</div>
+						<div class="fragment">
+							<h4 class="secondary-heading-color">Relate content</h4>
+							<p style="font-size: 0.8em">Relate a book to say it's author or series</p>
+						</div>
+						<div class="fragment">
+							<h4 class="secondary-heading-color">Access control</h4>
+							<p style="font-size: 0.8em">Control access to a book</p>
+						</div>
+						<div class="fragment">
+							<h4 class="secondary-heading-color">Hierarchy</h4>
+							<p style="font-size: 0.8em">Organize books on shelves and bookcases</p>
+						</div>
+						<div class="fragment">
+							<h4 class="secondary-heading-color">Hierarchical access control</h4>
+							<p style="font-size: 0.8em">Control access to specific shelves and bookcases</p>
+						</div>
+					</section>
+
+					<section>
+						<img src="media/images/front%20desk%20and%20stacks.jpg">
+					</section>
+
+					<section>
+						<h1>The options</h1>
+						<table class="reveal">
+							<tr>
+								<th class=""></th>
+								<th class="">Tagging</th>
+								<th class="apply-border-top apply-border-left">Relate content</th>
+								<th class="apply-border-top apply-border-right">Access control</th>
+								<th class="">Hierarchy</th>
+							</tr>
+							<tr class="fragment">
+								<td class="">Taxonomy</td>
+								<td class=""><i class="fa fa-check fa-2x" aria-hidden="true"></i></td>
+								<td class="apply-border-left"><i class="fa fa-check fa-2x" aria-hidden="true"></i></td>
+								<td class="apply-border-right"><i class="fa fa-check fa-2x" aria-hidden="true"></i></td>
+								<td class=""><i class="fa fa-check fa-2x" aria-hidden="true"></i></td>
+							</tr>
+							<tr class="fragment">
+								<td class="">Entity reference</td>
+								<td class=""></td>
+								<td class="apply-border-left"><i class="fa fa-check fa-2x" aria-hidden="true"></i></td>
+								<td class="apply-border-right"></td>
+								<td class=""></td>
+							</tr>
+							<tr class="fragment">
+								<td class="">Organic groups</td>
+								<td class=""><i class="fa fa-check fa-2x" aria-hidden="true"></i></td>
+								<td class="apply-border-left"><i class="fa fa-check fa-2x" aria-hidden="true"></i></td>
+								<td class="apply-border-right"><i class="fa fa-check fa-2x" aria-hidden="true"></i></td>
+								<td class=""></td>
+							</tr>
+							<tr class="fragment">
+								<td class="">Group</td>
+								<td class=""><i class="fa fa-check fa-2x" aria-hidden="true"></i></td>
+								<td class="apply-border-left apply-border-bottom"><i class="fa fa-check fa-2x" aria-hidden="true"></i></td>
+								<td class="apply-border-right apply-border-bottom"><i class="fa fa-check fa-2x" aria-hidden="true"></i></td>
+								<td class=""><i class="fa fa-check fa-2x" aria-hidden="true"></i></td>
+							</tr>
+						</table>
+						<span class="fragment apply-table-border"></span>
+					</section>
+				</section>
+
+				<!-- Organic Groups and Group -->
+				<section>
+					<section>
+						<h1>Organic Groups and Group</h1>
+					</section>
+
+					<section>
+						<h2>Strengths</h2>
+
+						<p class="fragment">Arbitrary grouping of content</p>
+						<p class="fragment">Arbitrary grouping of users</p>
+						<p class="fragment">Access control</p>
+						<div class="fragment">
+							<p>Integration with major contrib modules</p>
+							<ul>
+								<li>Views</li>
+								<li>Panels</li>
+								<li>Rules</li>
+								<li>Pathauto</li>
+								<li>Features</li>
+							</ul>
+						</div>
+					</section>
+
+					<section>
+						<h2>Weaknesses</h2>
+
+						<p class="fragment">Can be complex to setup</p>
+						<p class="fragment">Can impact performance</p>
+						<p class="fragment">Unwanted interactions with other access control modules</p>
+					</section>
+				</section>
+
+				<!-- Group vs OG -->
+				<section>
+					<section>
+						<h1>Group vs OG</h1>
+					</section>
+
+					<section>
+						<h2>Advantages</h2>
+						<p class="fragment">Easy to setup</p>
+						<p class="fragment">Entity based</p>
+						<p class="fragment">Subgroups by default</p>
+						<p class="fragment">Easy to extend</p>
+						<p class="fragment">Seamless integration with UI</p>
+					</section>
+
+					<section>
+						<h2>Disadvantages</h2>
+						<p class="fragment">Not organic</p>
+						<p class="fragment">No mixing public and private content of the same type</p>
+						<p class="fragment">Multiple parent groups not currently supported</p>
+						<p class="fragment">Fewer integrations</p>
+					</section>
+				</section>
+
+				<!-- Group-->
+				<section>
+					<section>
+						<h1>Group</h1>
+					</section>
+
+					<section>
+						<h2>Architecture</h2>
+
+						<p class="fragment">Everything is a custom entity</p>
+						<h4 class="fragment secondary-heading-color">Groups</h4>
+						<h4 class="fragment secondary-heading-color">Group memberships</h4>
+						<h4 class="fragment secondary-heading-color">Group roles</h4>
+						<p class="fragment">Everything has it's own class</p>
+					</section>
+
+					<section>
+						<h2>Making an entity a child of Group</h2>
+						<pre class="fragment"><code class="hlphp" data-trim contenteditable>
+/**
+ * Implements hook_entity_info_alter().
+ */
+function gnode_entity_info_alter(&$entity_info) {
+  // Nodes can only have one group parent.
+  $entity_info['node']['group entity'] = 'single';
+}
+						</code></pre>
+						<p class="fragment">Implement access control</p>
+					</section>
+
+					<section>
+						<h1>Very good code documentation</h1>
+					</section>
+
+					<section>
+						<h1>Built with it's own API</h1>
+					</section>
+
+					<section>
+						<h1>Examples</h1>
+					</section>
+
+					<section>
+						<h2>Add a member to a group</h2>
+						<p>OG</p>
+						<pre><code class="hlphp" data-trim contenteditable>
+global $user;
+$group = node_load($gid);
+
+if (!$group_type) {
+  $group_type = 'node';
+}
+
+if (!$membership_type) {
+  $membership_type = OG_MEMBERSHIP_TYPE_DEFAULT;
+}
+
+$is_a_group = $group->group_group[$group->language][0]['value'];
+
+if ($is_a_group && $user) {
+  $values = array(
+  'entity_type' => 'user',
+  'entity' => $user,
+  'state' => OG_STATE_ACTIVE,
+  'membership_type' => $membership_type
+);
+
+og_group($group_type, $gid, $values);
+						</code></pre>
+					</section>
+
+					<section>
+						<h2>Add a member to a group</h2>
+						<p>Group</p>
+						<pre><code class="hlphp" data-trim contenteditable>
+global $user;
+$group = group_load($gid);
+$group->addMember($user->uid);
+						</code></pre>
+					</section>
+
+					<section>
+						<h2>Get all group members</h2>
+						<p>OG</p>
+						<pre><code class="hlphp" data-trim contenteditable>
+$group = node_load($gid);
+og_get_group_members_properties($group, array(), 'members', 'node');
+						</code></pre>
+					</section>
+
+					<section>
+						<h2>Get all group members</h2>
+						<p>Group</p>
+						<pre><code class="hlphp" data-trim contenteditable>
+$group = group_load($gid);
+$members = $group->getMembers();
+						</code></pre>
+						<p class="fragment">Get all group members of all subgroups</p>
+						<pre class="fragment"><code class="hlphp" data-trim contenteditable>
+$group = group_load($gid);
+$members = $group->getMembersRecursive();
+						</code></pre>
+					</section>
+
+					<section>
+						<h2>Get all nodes in group</h2>
+						<p>OG</p>
+						<pre><code class="hlphp" data-trim contenteditable>
+I couldn't find a good answer
+						</code></pre>
+					</section>
+
+					<section>
+						<h2>Get all nodes in group</h2>
+						<p>Group</p>
+						<pre><code class="hlphp" data-trim contenteditable>
+$group = group_load($gid);
+$nodes = $group->getEntitiesOfType('node');
+						</code></pre>
+						<p class="fragment">Get all entities in group</p>
+						<pre class="fragment"><code class="hlphp" data-trim contenteditable>
+$group = group_load($gid);
+$entities = $group->getEntities();
+						</code></pre>
+					</section>
+				</section>
+
+
+
+
+
+
+
+
 			</div>
 		</div>
 
@@ -46,6 +366,8 @@
 				]
 			});
 		</script>
+		<script src="js/dbridge.js"></script>
+
 		<aside class="db-logo-footer">
 			<a href="http://www.dbridgesolutions.com/">
 				<img src="media/images/db.png">

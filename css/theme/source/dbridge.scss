@@ -16,6 +16,10 @@
 
 // Override theme settings (see ../template/settings.scss)
 
+$db-yellow: #fdeb00;
+$db-orange: #e97724;
+$db-grey: #636466;
+
 // Background of the presentation
 $backgroundColor: #2E2E2E;
 
@@ -30,7 +34,8 @@ $mainColor: #E0E0E0;
 // Headings
 //$headingMargin: 0 0 $blockMargin 0;
 $headingFont: 'Montserrat', Impact, sans-serif;
-$headingColor: #e97724;
+$headingColor: $db-orange;
+$secondaryHeadingColor: #E0E0E0;
 //$headingLineHeight: 1.2;
 $headingLetterSpacing: -0.03em;
 $headingTextTransform: none;
@@ -82,3 +87,67 @@ aside.db-logo-footer {
 @import "../template/theme";
 // ---------------------------------------------
 
+.reveal section img {
+  border: none;
+  background: none;
+  box-shadow: none;
+}
+
+.reveal .secondary-heading-color {
+  color: $secondaryHeadingColor;
+}
+
+// Font awesome colors and styling
+.fa {
+  vertical-align: middle;
+}
+
+.fa-drupal {
+  color: #0678BE;
+}
+
+.fa-twitter {
+  color: #55acee;
+}
+
+.fa-github {
+  color: #999;
+}
+
+// Table styling
+.reveal table tr {
+  th,
+  td {
+    vertical-align: middle;
+  }
+
+  th,
+  td:not(:first-child) {
+    text-align: center;
+  }
+}
+
+.table-border {
+  tbody tr {
+    .apply-border-left {
+      border-left: 4px $db-orange solid;
+    }
+
+    .apply-border-right {
+      border-right: 4px $db-orange solid;
+    }
+
+    .apply-border-top {
+      border-top: 8px $db-orange solid;
+    }
+
+    .apply-border-bottom,
+    &:last-child .apply-border-bottom {
+      border-bottom: 8px $db-orange solid;
+    }
+  }
+}
+
+td i.fa-check {
+  color: $db-yellow;
+}
