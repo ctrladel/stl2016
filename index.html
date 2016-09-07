@@ -212,20 +212,25 @@
 					</section>
 				</section>
 
-				<!-- Group-->
+				<section>
+					<h1>Group</h1>
+				</section>
+
 				<section>
 					<section>
-						<h1>Group</h1>
+						<h1>Architecture</h1>
 					</section>
 
 					<section>
-						<h2>Architecture</h2>
-
 						<p class="fragment">Everything is a custom entity</p>
 						<h4 class="fragment secondary-heading-color">Groups</h4>
 						<h4 class="fragment secondary-heading-color">Group memberships</h4>
 						<h4 class="fragment secondary-heading-color">Group roles</h4>
 						<p class="fragment">Everything has it's own class</p>
+					</section>
+
+					<section>
+						<h1>Excellent code documentation</h1>
 					</section>
 
 					<section>
@@ -241,17 +246,11 @@ function gnode_entity_info_alter(&$entity_info) {
 						</code></pre>
 						<p class="fragment">Implement access control</p>
 					</section>
+				</section>
 
+				<section>
 					<section>
-						<h1>Very good code documentation</h1>
-					</section>
-
-					<section>
-						<h1>Built with it's own API</h1>
-					</section>
-
-					<section>
-						<h1>Examples</h1>
+						<h1>Code Examples</h1>
 					</section>
 
 					<section>
@@ -339,12 +338,117 @@ $entities = $group->getEntities();
 					</section>
 				</section>
 
+				<section>
+					<section>
+						<h1>DocBlocks</h1>
 
+						<h2 class="fragment">and comments!</h2>
+					</section>
 
+					<section>
+						<h2>Group::addMember()</h2>
+						<pre><code class="hlphp" data-trim contenteditable>
+/**
+* Add a user to a group.
+*
+* If the user is anonymous or already a member, nothing changes.
+*
+* @param int $uid
+*   The uid of the member.
+* @param array $values
+*   (optional) Extra values to add to the GroupMembership entity, like the
+*   'roles' property. You cannot overwrite the group id (gid) or user id
+*   (uid) with this method. Leave blank to make the user 'just a member'.
+*/
+public function addMember($uid, array $values = array()) {
+					</code></pre>
+					</section>
 
+					<section>
+						<h2>Group::getMembers()</h2>
+						<pre><code class="hlphp" data-trim contenteditable>
+/**
+* Get all members of a group.
+*
+* @return array
+*   An array of GroupMembership entities.
+*/
+public function getMembers() {
+					</code></pre>
+					</section>
 
+					<section>
+						<h2>Group::getEntities()</h2>
+						<pre><code class="hlphp" data-trim contenteditable>
+/**
+* Get all child entities.
+*
+* @param bool $flat
+*   (optional) Whether or not to flatten the result array.
+* @param bool $reset
+*   (optional) Whether to reset the internal cache.
+*
+* @return array
+*   An array of child entities, keyed by their type, bundle and entity id.
+*   When $flat is set to TRUE, the return value is one big array of
+*   entities, which are keyed numerically and not by their entity id!
+*/
+public function getEntities($flat = FALSE, $reset = FALSE) {
+						</code></pre>
 
+						<p>Found in this function</p>
 
+						<pre><code class="hlphp" data-trim contenteditable=>
+// We run the entity_load() result through array_values() to prevent
+// people from making the false assumption that we still return the
+// entity ids as array keys.
+						</code></pre>
+					</section>
+
+					<section>
+						<h2>Group::getEntitiesOfType()</h2>
+						<pre><code class="hlphp" data-trim contenteditable>
+/**
+* Get all child entities of a certain type.
+*
+* @param string $entity_type
+*   The type of child entities.
+* @param string $bundle
+*   (optional) The bundle of the entity type.
+*
+* @return array
+*   An array of child entities of a certain type and optionally bundle,
+*   keyed by their entity id.
+*/
+public function getEntitiesOfType($entity_type, $bundle = NULL) {
+					</code></pre>
+					</section>
+
+					<section>
+						<h2>gnode_form_node_form_alter</h2>
+						<pre><code class="hlphp" data-trim contenteditable>
+// If the user can't bypass group access or administer the parent group and we
+// already have a nid or gid, we are either on a node edit form or a Group
+// Node add form. In such a case, we do not show anything.
+						</code></pre>
+
+						<pre><code class="hlphp" data-trim contenteditable>
+// There is a special use case where a user may edit global nodes, but
+// not create them and also may bypass group access. In such a case, he
+// could move an ungrouped node to a group, or leave it ungrouped.
+if (!empty($node->nid) && empty($gid) && !$global_node_create_access) {
+						</code></pre>
+					</section>
+
+			</section>
+
+            <section>
+                <img src="media/images/livedemo.gif">
+            </section>
+
+            <section>
+                <h1>Questions?</h1>
+            </section>
 
 			</div>
 		</div>
