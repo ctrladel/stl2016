@@ -151,3 +151,21 @@ aside.db-logo-footer {
 td i.fa-check {
   color: $db-yellow;
 }
+
+.d8-diagram {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  &:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 36%;
+    left: 1em;
+    right: 1em;
+    border-bottom: 2px white dashed;
+  }
+}

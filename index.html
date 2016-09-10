@@ -35,6 +35,13 @@
 					<p>
 						<small>Presentation by Kyle Einecker</small>
 					</p>
+
+					<aside class="notes">
+						<ul>
+							<li>used OG?</li>
+							<li>wanted to bang your head against a wall?</li>
+						</ul>
+					</aside>
 				</section>
 
 				<!-- About me -->
@@ -50,8 +57,9 @@
 
 					<aside class="notes">
 						<ul>
-							<li>Do everything</li>
-							<li>Prefer backend</li>
+							<li>generalist</li>
+							<li>prefer backend</li>
+							<li>we're hiring</li>
 						</ul>
 					</aside>
 				</section>
@@ -63,12 +71,25 @@
 					<p class="fragment">Been around since 2013</p>
 					<p class="fragment">~1,500 installs</p>
 					<img class="fragment" src="media/images/drupal8.png" height="100px">
+
+					<aside class="notes">
+						<ul>
+							<li>actively maintained</li>
+							<li>active issue queue</li>
+						</ul>
+					</aside>
 				</section>
 
 				<!-- The problem -->
 				<section>
 					<section>
 						<h1>The problem</h1>
+
+						<aside class="notes">
+							<ul>
+								<li>10,000ft look at the problem</li>
+							</ul>
+						</aside>
 					</section>
 
 					<section>
@@ -78,10 +99,25 @@
 						<h3 class="secondary-heading-color">Manage</h3>
 						<h3 class="secondary-heading-color">Control access to</h3>
 						<h3 class="secondary-heading-color">Migrate</h3>
+
+						<aside class="notes">
+							<ul>
+								<li>hard to make meaningful pages</li>
+								<li>hard for editors to manage</li>
+								<li>hard to control access for editors and users</li>
+								<li>when you eventually update to a new version/platform</li>
+							</ul>
+						</aside>
 					</section>
 
 					<section>
 						<img src="media/images/450_messy1_080516.jpg">
+
+						<aside class="notes">
+							<ul>
+								<li>we don't want our sites be the digital equivalent of this</li>
+							</ul>
+						</aside>
 					</section>
 
 					<section>
@@ -107,10 +143,28 @@
 							<h4 class="secondary-heading-color">Hierarchical access control</h4>
 							<p style="font-size: 0.8em">Control access to specific shelves and bookcases</p>
 						</div>
+
+						<aside class="notes">
+							<ul>
+								<li>hierarchical access control - niche but once you have the others it is wanted</li>
+								<li>hard to make meaningful pages</li>
+								<li>lots of overlap</li>
+							</ul>
+						</aside>
 					</section>
 
 					<section>
 						<img src="media/images/front%20desk%20and%20stacks.jpg">
+
+						<aside class="notes">
+							<ul>
+								<li>this is what we want our site to look like</li>
+								<li>nicer to look at</li>
+								<li>easy to control access</li>
+								<li>can send people to a specific spot</li>
+								<li>unless you like a mess this is better</li>
+							</ul>
+						</aside>
 					</section>
 
 					<section>
@@ -153,6 +207,14 @@
 							</tr>
 						</table>
 						<span class="fragment apply-table-border"></span>
+
+						<aside class="notes">
+							<ul>
+								<li>often use multiple</li>
+								<li>lines are very blurry</li>
+								<li>focus on groups strengths relating content/access control</li>
+							</ul>
+						</aside>
 					</section>
 				</section>
 
@@ -160,6 +222,12 @@
 				<section>
 					<section>
 						<h1>Organic Groups and Group</h1>
+
+						<aside class="notes">
+							<ul>
+								<li>look at what both OG and Group are good/bad at</li>
+							</ul>
+						</aside>
 					</section>
 
 					<section>
@@ -209,7 +277,7 @@
 						<p class="fragment">Not organic</p>
 						<p class="fragment">No mixing public and private content of the same type</p>
 						<p class="fragment">Multiple parent groups not currently supported</p>
-						<p class="fragment">Fewer integrations</p>
+						<p class="fragment">Fewer prebuilt integrations</p>
 					</section>
 				</section>
 
@@ -231,10 +299,6 @@
 					</section>
 
 					<section>
-						<h1>Excellent code documentation</h1>
-					</section>
-
-					<section>
 						<h2>Making an entity a child of Group</h2>
 						<pre class="fragment"><code class="hlphp" data-trim contenteditable>
 /**
@@ -245,7 +309,10 @@ function gnode_entity_info_alter(&$entity_info) {
   $entity_info['node']['group entity'] = 'single';
 }
 						</code></pre>
-						<p class="fragment">Implement access control</p>
+						<span class="fragment">
+							<p>Implement access control</p>
+							<p>Integrate with entity'	s interface</p>
+						</span>
 					</section>
 				</section>
 
@@ -448,8 +515,22 @@ if (!empty($node->nid) && empty($gid) && !$global_node_create_access) {
             </section>
 
             <section>
+                <h1>Differences in D8</h1>
+				<div class="d8-diagram">
+					<img src="media/images/d8-group-group.svg">
+					<img class="fragment" src="media/images/d8-group-groupcontent.svg">
+					<img src="media/images/d8-group-node.svg">
+				</div>
+            </section>
+
+            <section>
                 <h1>Questions?</h1>
             </section>
+
+			<section>
+				<h1>The end</h1>
+				<p>Slides available at <a href="https://ctrladel.github.io/stl2016">ctrladel.github.io/stl2016</a></p>
+			</section>
 
 			</div>
 		</div>
